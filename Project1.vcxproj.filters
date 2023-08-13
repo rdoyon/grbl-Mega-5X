@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="grbl">
+      <UniqueIdentifier>{84048e52-a242-48c5-8fe8-f6ab73afee13}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="grbl\analog_control.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\coolant_control.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\digital_control.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\eeprom.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\gcode.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\jog.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\limits.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\main.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\motion_control.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\nuts_bolts.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\planner.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\print.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\probe.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\protocol.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\report.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\serial.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\settings.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\sleep.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\spindle_control.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\stepper.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+    <ClCompile Include="grbl\system.c">
+      <Filter>grbl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="grbl\analog_control.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\config.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\coolant_control.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\cpu_map.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\defaults.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\digital_control.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\eeprom.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\gcode.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\grbl.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\jog.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\limits.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\motion_control.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\nuts_bolts.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\planner.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\print.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\probe.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\protocol.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\report.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\serial.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\settings.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\sleep.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\spindle_control.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\stepper.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+    <ClInclude Include="grbl\system.h">
+      <Filter>grbl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
