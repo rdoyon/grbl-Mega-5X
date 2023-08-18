@@ -56,7 +56,7 @@
 // unpredictable behavior!
 //----------------------------------------------------------------------
 
-#define N_AXIS 4        // Number of axes (3 to 6)
+#define N_AXIS 6        // Number of axes (3 to 6)
 #define N_AXIS_LINEAR 3 // Number of linears axis, must be <= N_AXIS
 
 // Axis indexing and names
@@ -71,7 +71,7 @@
 #endif
 #if N_AXIS > 3
   #define AXIS_4 3
-  #define AXIS_4_NAME 'Y' // Letter of axis number 4
+  #define AXIS_4_NAME 'A' // Letter of axis number 4
 #endif
 #if N_AXIS > 4
   #define AXIS_5 4
@@ -79,7 +79,7 @@
 #endif
 #if N_AXIS > 5
   #define AXIS_6 5
-  #define AXIS_6_NAME 'C' // Letter of axis number 6
+  #define AXIS_6_NAME 'Y' // Letter of axis number 6
 #endif
 #if N_AXIS > 6
   #error "N_AXIS must be <= 6. N_AXIS > 6 is not implemented."
