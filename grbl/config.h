@@ -39,8 +39,12 @@
 // NOTE: OEMs can avoid the need to maintain/update the defaults.h and cpu_map.h files and use only
 // one configuration file by placing their specific defaults and pin map at the bottom of this file.
 // If doing so, simply comment out these two defines and see instructions below.
-#define DEFAULTS_GENERIC
-#define CPU_MAP_2560_RAMPS_BOARD
+//#define DEFAULTS_GENERIC
+//#define CPU_MAP_2560_RAMPS_BOARD
+
+#define DEFAULTS_CNC4NEWBIE
+
+#define CPU_MAP_MEGA_LITE_2560_BOARD
 
 //----------------------------------------------------------------------
 // Axis definitions :
@@ -52,7 +56,7 @@
 // unpredictable behavior!
 //----------------------------------------------------------------------
 
-#define N_AXIS 5        // Number of axes (3 to 6)
+#define N_AXIS 4        // Number of axes (3 to 6)
 #define N_AXIS_LINEAR 3 // Number of linears axis, must be <= N_AXIS
 
 // Axis indexing and names
@@ -67,7 +71,7 @@
 #endif
 #if N_AXIS > 3
   #define AXIS_4 3
-  #define AXIS_4_NAME 'A' // Letter of axis number 4
+  #define AXIS_4_NAME 'Y' // Letter of axis number 4
 #endif
 #if N_AXIS > 4
   #define AXIS_5 4
@@ -120,9 +124,11 @@
 // SPINDLE_PWM_ON_D9  => 0-12v 8 bits PWM on RAMPS D9
 // SPINDLE_PWM_ON_D6  => 0-5v 8bits PWM on RAMPS Servo 2 signal (Mega 2560 D6)
 // Uncomment the line which correspond to your hardware
-#define SPINDLE_PWM_ON_D8
+//#define SPINDLE_PWM_ON_D8
 //#define SPINDLE_PWM_ON_D6
 //#define SPINDLE_PWM_ON_D9
+
+#define  SPINDLE_PWM_ON_D7 // Pour CPU_MAP_MEGA_LITE_2560_BOARD
 
 // Spindle PWM signal inversion:
 // In case of particular electronics, it may be necessary to invert the values
@@ -240,8 +246,10 @@
 // NOTE: Defaults are set for a traditional 3-axis CNC machine. Z-axis first to clear, followed by X & Y.
 #if N_AXIS == 4 // 4 axis : homing
   #define HOMING_CYCLE_0 (1<<AXIS_3) // Home Z axis first to clear workspace.
-  #define HOMING_CYCLE_1 ((1<<AXIS_1)|(1<<AXIS_2))     // OPTIONAL: uncomment to move X,Y at the same time.
-  //#define HOMING_CYCLE_1 (1<<AXIS_1) // Home X axis  // OPTIONAL: uncomment to move only X at a time.
+  //#define HOMING_CYCLE_1 ((1<<AXIS_1)|(1<<AXIS_2))     // OPTIONAL: uncomment to move X,Y at the same time.
+  #define HOMING_CYCLE_1 (1<<AXIS_1) // Home X axis  // OPTIONAL: uncomment to move only X at a time.
+  #define HOMING_CYCLE_2 ((1<<AXIS_2)|(1<<AXIS_4))   // Home Y axis 
+
   //#define HOMING_CYCLE_2 (1<<AXIS_2) // Home Y axis  // OPTIONAL: uncomment to move only Y at a time.
   //#define HOMING_CYCLE_3 (1<<AXIS_4) // Home 4th axis (A)
 #elif N_AXIS == 5 // 5 axis : homing
@@ -784,6 +792,12 @@
    below.
 */
 
+#define DEFAULT_AXIS_1_ENDSTOP_ADJ 0
+#define DEFAULT_AXIS_2_ENDSTOP_ADJ 0
+#define DEFAULT_AXIS_3_ENDSTOP_ADJ 0
+#define DEFAULT_AXIS_4_ENDSTOP_ADJ 0
+#define DEFAULT_AXIS_5_ENDSTOP_ADJ 0
+#define DEFAULT_AXIS_6_ENDSTOP_ADJ 0
 // Paste CPU_MAP definitions here.
 
 // Paste default settings definitions here.

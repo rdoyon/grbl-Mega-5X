@@ -23,6 +23,7 @@
 
 void digital_init()
 {
+#ifdef DIGITAL_OUTPUT_DDR_0
   // Outputs
   DIGITAL_OUTPUT_DDR_0 |= (1 << DIGITAL_OUTPUT_BIT_0); // Configure as output pin.
   DIGITAL_OUTPUT_DDR_1 |= (1 << DIGITAL_OUTPUT_BIT_1); // Configure as output pin.
@@ -47,12 +48,14 @@ void digital_init()
       DIGITAL_INPUT_PORT_3 |= DIGITAL_INPUT_MASK_3;    // Enable internal pull-up resistors. Normal high operation.
     #endif
   #endif
+#endif
 }
 
 
 // Returns current digital output state. Overrides may alter it from programmed state.
 uint8_t digital_get_state()
 {
+#ifdef DIGITAL_OUTPUT_PORT_0
   uint8_t digital_state = DIGITAL_OUTPUT_STATE_OFF;
   // Output status
   #ifdef INVERT_DIGITAL_OUTPUT_PIN_0
@@ -115,6 +118,7 @@ uint8_t digital_get_state()
     }
   #endif
   return(digital_state);
+#endif
 }
 
 
@@ -123,6 +127,7 @@ uint8_t digital_get_state()
 // The mode argument is a bit flag wich define which output must be stopped.
 void digital_stop(const uint8_t mode)
 {
+#ifdef   DIGITAL_OUTPUT_PORT_0
   if (mode & DIGITAL_OUTPUT_STATE_P0) {
     #ifdef INVERT_DIGITAL_OUTPUT_PIN_0
       DIGITAL_OUTPUT_PORT_0 |= (1 << DIGITAL_OUTPUT_BIT_0);
@@ -151,6 +156,7 @@ void digital_stop(const uint8_t mode)
       DIGITAL_OUTPUT_PORT_3 &= ~(1 << DIGITAL_OUTPUT_BIT_3);
     #endif
   }
+#endif
 }
 
 
@@ -158,6 +164,7 @@ void digital_stop(const uint8_t mode)
 // Also sets a flag to report an update to a digital state.
 void digital_set_state(uint8_t mode)
 {
+#ifdef   DIGITAL_OUTPUT_PORT_0
   if (sys.abort) { return; } // Block during abort.  
   
   if (mode & DIGITAL_OUTPUT_STATE_P0) {
@@ -213,6 +220,7 @@ void digital_set_state(uint8_t mode)
     #endif
   }
   sys.report_ovr_counter = 0; // Set to report change immediately
+#endif
 }
 
 

@@ -9,3 +9,5 @@
 platformio.ini
 
 README.md
+.vs
+grbl.mpc_autosquare
