@@ -301,7 +301,7 @@ void limits_go_home(uint8_t cycle_mask)
 		  // Allow a per-stepper-axis offset to be set in to adjust for the machine
 		  // or endstops not being perfectly square/aligned.
 		  float axis_offset = 0;
-		  if (n_cycle == 0 && N_AXIS == 4) {
+		  if (n_cycle == 0 && N_AXIS == 6) {
 			  if (settings.endstop_adj[idx] > 0) {
 				  axis_offset = settings.endstop_adj[idx];
 			  }
